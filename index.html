@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lp-game-box</title>
+</head>
+<body>
+    <div id='lp-game-box'>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="272.08px" height="100%" viewBox="0 0 272.08 700" >
+      
+          <path d="M168.66,0V104s-5.63,30.89-46.51,30.89H71.81c-59.72.2-59.72,82.47,0,82.81h83.84s37.07,2.16,37.65,41.64c.67,45.62,0,95.54,0,95.54s.8,41.45-35.55,42.74c-41.36,1.48-122.25,0-122.25,0-46.43.38-46.9,76.85,0,80.12,0,0,141.51-1,197.13,0s47.83,81.32.87,82.81H133.45s-35.29,5.37-35.29,51.94V700"
+                stroke="rgba(0,0,0,0)" stroke-width="15" fill="none" id="wire"></path>
+      
+          <image id="car_image" x="-5" y="-5" width="25" height="50" xlink:href="http://mms.aimdatabase.com/Images/Dealer01/Global/TinyCar.png" style="transform:rotate(90deg);">
+            <animateMotion dur="10s" repeatCount="1" rotate="auto" id="car_path">
+              <mpath xlink:href="#wire"></mpath>
+            </animateMotion>    
+          </image>
+          <!--   <circle cx="" cy="" r="3" fill="">   
+          <animateMotion dur="5s" repeatCount="indefinite">
+            <mpath xlink:href="#wire"></mpath>
+          </animateMotion>
+        </circle> -->
+        </svg>
+        <div class='road_block finish'></div>
+        <div class='road_block butterfly'></div>
+        <div class='road_block car'></div>
+        <div class='road_block bigfoot'></div>
+        <div id='start_btn'>HATI-HATI!<br>
+          <p>Untuk menghindari bahaya, Tekan & tahan, dengan jari atau mouse<br><br></p>
+          <span>PLAY</span> 
+        </div>
+      </div>
+      
+      <div id='hb'></div>
+      
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700,900&display=swap" rel="stylesheet">
+      <script src="main.js"></script>
+</body>
+</html>

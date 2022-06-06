@@ -1,0 +1,213 @@
+:root {
+    --bg-color:SeaGreen;
+  }
+  
+  html {
+    font-family:sans-serif;
+    text-align:center;
+    background:SeaGreen;
+    overflow-x:hidden;
+    font-family:'Montserrat', sans-serif;
+  }
+  body {
+    margin:0;
+    padding:0;
+    text-align:center;
+  }
+  #lp-offer-box {
+    width:100%;
+    max-width:500px;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  #lp-offer-box h1 {
+    text-align:left;
+    color:white;
+    font-weight:300;
+    font-size:40px;
+    margin-bottom:0;
+    line-height:100%;
+  }
+  #lp-offer-box .subhead {
+    color:white;
+    font-weight:300;
+    font-size:28px;
+    margin-bottom:50px;
+    text-align:left;
+  }
+  
+  #lp-game-box {
+    width:750px;
+    height:700px;
+    max-height:100vh;
+    position:relative;
+    display:inline-block;
+    margin:0 auto;
+    vertical-align:middle; 
+    background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=cb517b24-8f2d-582a-a9d0-055c32ad60d2&637358737184929359');
+    background-position:50% 50%;
+  }
+  #lp-game-box:after {
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=0907ef02-3ccd-550f-9f1a-fb56fc512c68&637358737734059919');
+    background-position:50% 50%;
+  }
+  svg {
+    position:absolute;
+    left:27.5%;
+    overflow: visible;
+  }
+  
+  #car_image {
+    opacity:0;
+  }
+  
+  #hb {
+      outline:2px solid red;
+    position:absolute;
+  }
+  
+  #start_btn {
+    width:100%;
+    max-width:300px;
+    padding:15px 20px;
+    font-size:48px;
+    background:white;
+    color:#333;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:10px;
+    box-shadow:15px 15px 30px rgba(0,0,0,.25);
+    z-index:99;
+    cursor:pointer;
+    font-weight:900;
+    letter-spacing:5px;
+    line-height:100%;
+    box-sizing:border-box;
+    /*   opacity:0; */
+  }
+  
+  #start_btn p {
+    font-size:12px;
+    line-height:150%;
+    font-weight:500;
+    letter-spacing:1px;
+  }
+  
+  #start_btn span {
+    display:block;
+    background:var(--bg-color);
+    color:white;
+    border-radius:25px;
+  }
+  
+  .road_block, .hit {
+    position:absolute;
+  }
+  
+  .finish {
+    width:75px;
+    height:30px;
+    /*   background:red; */
+    bottom:0;
+    left:35.75%;
+  }
+  
+  .butterfly {
+    width:30px;
+    height:30px;
+    /*   background:radial-gradient(circle at -70% 50%, transparent 29px, black 29px, black 31px, transparent 31px), radial-gradient(circle at 170% 50%, transparent 29px, black 29px, black 31px, transparent 31px), linear-gradient(to right,transparent 14px,black 14px, black 16px, transparent 16px), linear-gradient(to bottom,darkorange 14px,black 14px, black 16px, darkorange 16px); */
+    background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=2a25cc9f-58a6-5b14-adb2-da3381139a36&637358739887127329');
+    background-size:100% 85%;
+    background-repeat:no-repeat;  
+    left:40%;
+    top:54%;  
+    z-index:1;
+    /*   outline:2px solid red; */
+    animation:butterfly 8s linear infinite;
+  }
+  .butterfly:after {
+    content:'';
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.25);
+    position:absolute;
+    left:55%;
+    top:50%;
+    z-index:-1;
+    border-radius:50%;
+    filter:blur(5px);
+  }
+  
+  @keyframes butterfly {  
+    25% { transform:rotate(30deg); }
+    50% { top:66%; transform:rotate(0deg); }
+    75% { transform:rotate(30deg); }
+  }
+  
+  .car {
+    width:70px;
+    height:36px;
+    background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=d8937bda-d635-5ff8-bd75-6100d21a4948&637358767839442864');
+    background-size:contain;
+    background-repeat:no-repeat;
+    left:45%;
+    top:92%;
+    z-index:1;
+    animation:car 5s linear infinite;
+  }
+  @keyframes car {
+    33% { transform:translateX(-75%); }
+    50% { transform:translateX(-75%); }
+    85% { transform:translateX(0%); }
+  }
+  
+  .bigfoot {
+    width:38px;
+    height:56px;
+    background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=5af72cdd-1847-59e5-a449-6361ba67872c&637359473773786611');
+    background-size:contain;
+    background-repeat:no-repeat;
+    left:56%;
+    top:28%;
+    z-index:0;
+    animation:bigfoot 8s linear infinite;
+    filter:brightness(1.1);
+  }
+  .bigfoot:after {
+    content:'';
+    width:75%;
+    height:50%;
+    background:rgba(0,0,0,.25);
+    position:absolute;
+    left:50%;
+    top:50%;
+    z-index:-1;
+    transform-origin:50% 100%;
+    transform:skewX(-25deg);
+    filter:blur(5px);
+  }
+  @keyframes bigfoot {
+    25% { left:50%; top:32%; }
+    52% { left:50%; top:32%; }
+    75% { left:56%; top:28%; }
+  }
+  
+  /* @keyframes launch {
+  0% { transform:none; }
+  100% { transform:translateY(-100%); opacity:0; }
+  } */
+  
+  @media screen and (max-width:750px) {
+    #lp-game-box {
+      left:50%;
+      transform:translateX(-50%);
+    }
+  }
